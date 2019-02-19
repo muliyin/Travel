@@ -2,19 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import BaiduMap from 'vue-baidu-map'
+import '../src/assets/init.css'
+import '../src/assets/border.css'   /*解决一像素边框问题*/
+import fastClick from 'fastclick'   /*解决点击延迟问题*/
 import animated from 'animate.css' // npm install animate.css --save安装，在引入
 
-Vue.use(animated)
-Vue.use(BaiduMap,{
-	ak:'pLPD2MjhI0ZunQrKUMzkdYxMRjA4MdEx'
-})
+Vue.config.productionTip = false;
 
-Vue.prototype.bus = new Vue();
+fastClick.attach(document.body);
+Vue.use(animated);
 
-Vue.component('paragraph')
-Vue.component('map')
-Vue.config.productionTip = false
 
 new Vue({
   router,
