@@ -7,11 +7,16 @@ import '../src/assets/iconfont.css'
 import '../src/assets/border.css'   /*解决一像素边框问题*/
 import fastClick from 'fastclick'   /*解决点击延迟问题*/
 import animated from 'animate.css' // npm install animate.css --save安装，在引入
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false;
 
 fastClick.attach(document.body);
 Vue.use(animated);
+Vue.use(VueAwesomeSwiper);
+
+
 
 
 new Vue({
