@@ -3,13 +3,12 @@
         <div class="recommend-title">周末去哪儿</div>
         <ul>
             <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
-                <div>
+                <div class="item-img-wrapper">
                     <img class="item-img" :src="item.url" alt="">
                 </div>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item-describe">{{item.describe}}</p>
-                    <button class="item-button">查看详情</button>
                 </div>
             </li>
         </ul>
@@ -25,32 +24,32 @@
 				recommendList: [
 					{
 						id: 1,
-						url: require('../../assets/imgs/icon1.png'),
+						url: require('../../assets/imgs/11.jpeg'),
 						title: '大连圣亚海洋世界',
 						describe: '浪漫大连首站，浪漫的海洋主题乐园'
 					}, {
 						id: 2,
-						url: require('../../assets/imgs/icon2.png'),
+						url: require('../../assets/imgs/12.jpeg'),
 						title: '大连圣亚海洋世界',
 						describe: '浪漫大连首站，浪漫的海洋主题乐园'
 					}, {
 						id: 3,
-						url: require('../../assets/imgs/icon3.png'),
+						url: require('../../assets/imgs/19.jpeg'),
 						title: '大连圣亚海洋世界',
 						describe: '浪漫大连首站，浪漫的海洋主题乐园'
 					}, {
 						id: 4,
-						url: require('../../assets/imgs/icon4.png'),
+						url: require('../../assets/imgs/13.jpeg'),
 						title: '大连圣亚海洋世界',
 						describe: '浪漫大连首站，浪漫的海洋主题乐园'
 					}, {
 						id: 5,
-						url: require('../../assets/imgs/icon5.png'),
+						url: require('../../assets/imgs/14.jpeg'),
 						title: '大连圣亚海洋世界',
 						describe: '浪漫大连首站，浪漫的海洋主题乐园'
 					}, {
 						id: 6,
-						url: require('../../assets/imgs/icon1.png'),
+						url: require('../../assets/imgs/15.jpeg'),
 						title: '大连圣亚海洋世界',
 						describe: '浪漫大连首站，浪漫的海洋主题乐园'
 					},
@@ -69,38 +68,26 @@
         background #eee
         text-indent .2rem
 
-    .item
+    .item-img-wrapper
+        height 0
         overflow hidden
-        display flex
-        height 1.9rem
+        padding-bottom 33.9%
 
         .item-img
-            width 1.7rem
-            height 1.7rem
-            padding .1rem
+            width 100%
 
-        .item-info
-            flex 1
-            text-align left
-            padding .1rem
-            min-width 0
+    .item-info
+        padding .1rem
+        text-align left
 
-            .item-title
-                line-height .54rem
-                font-size .32rem
-                ellipsis()
+        .item-title
+            line-height .54rem
+            font-size .32rem
+            ellipsis()
 
-            .item-describe
-                line-height .4rem
-                color #bbb
-                ellipsis()
-
-            .item-button
-                background #ff9300
-                padding 0 .2rem
-                border-radius .06rem
-                margin-top .16rem
-                color: #fff
-                line-height .44rem
+        .item-describe
+            line-height .4rem
+            color #bbb
+            ellipsis()
 
 </style>
