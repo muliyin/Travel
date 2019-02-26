@@ -17,42 +17,13 @@
 <script>
 	export default {
 		name: "HomeRecommend",
+        props:{
+		    recommendList: Array
+        },
 
 		data() {
 			return {
-				recommendList: [
-                    {
-                    	id: 1,
-                        url:require('../../assets/imgs/icon1.png'),
-                        title:'大连圣亚海洋世界',
-                        describe:'浪漫大连首站，浪漫的海洋主题乐园'
-                    },{
-                    	id: 2,
-                        url:require('../../assets/imgs/icon2.png'),
-                        title:'大连圣亚海洋世界',
-                        describe:'浪漫大连首站，浪漫的海洋主题乐园'
-                    },{
-                    	id: 3,
-                        url:require('../../assets/imgs/icon3.png'),
-                        title:'大连圣亚海洋世界',
-                        describe:'浪漫大连首站，浪漫的海洋主题乐园'
-                    },{
-                    	id: 4,
-                        url:require('../../assets/imgs/icon4.png'),
-                        title:'大连圣亚海洋世界',
-                        describe:'浪漫大连首站，浪漫的海洋主题乐园'
-                    },{
-                    	id:5,
-                        url:require('../../assets/imgs/icon5.png'),
-                        title:'大连圣亚海洋世界',
-                        describe:'浪漫大连首站，浪漫的海洋主题乐园'
-                    },{
-                    	id: 6,
-                        url:require('../../assets/imgs/icon1.png'),
-                        title:'大连圣亚海洋世界',
-                        describe:'浪漫大连首站，浪漫的海洋主题乐园'
-                    },
-                ]
+
             }
 		},
 	}

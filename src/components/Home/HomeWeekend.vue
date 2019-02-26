@@ -2,7 +2,7 @@
     <div>
         <div class="recommend-title">周末去哪儿</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.url" alt="">
                 </div>
@@ -18,42 +18,12 @@
 <script>
 	export default {
 		name: "HomeWeekend",
+        props: {
+		    weekendList: Array
+        },
 
 		data() {
 			return {
-				recommendList: [
-					{
-						id: 1,
-						url: require('../../assets/imgs/11.jpeg'),
-						title: '大连圣亚海洋世界',
-						describe: '浪漫大连首站，浪漫的海洋主题乐园'
-					}, {
-						id: 2,
-						url: require('../../assets/imgs/12.jpeg'),
-						title: '大连圣亚海洋世界',
-						describe: '浪漫大连首站，浪漫的海洋主题乐园'
-					}, {
-						id: 3,
-						url: require('../../assets/imgs/19.jpeg'),
-						title: '大连圣亚海洋世界',
-						describe: '浪漫大连首站，浪漫的海洋主题乐园'
-					}, {
-						id: 4,
-						url: require('../../assets/imgs/13.jpeg'),
-						title: '大连圣亚海洋世界',
-						describe: '浪漫大连首站，浪漫的海洋主题乐园'
-					}, {
-						id: 5,
-						url: require('../../assets/imgs/14.jpeg'),
-						title: '大连圣亚海洋世界',
-						describe: '浪漫大连首站，浪漫的海洋主题乐园'
-					}, {
-						id: 6,
-						url: require('../../assets/imgs/15.jpeg'),
-						title: '大连圣亚海洋世界',
-						describe: '浪漫大连首站，浪漫的海洋主题乐园'
-					},
-				]
 			}
 		},
 	}
@@ -63,7 +33,6 @@
     @import "~@/assets/mixins.styl"
 
     .recommend-title
-        margin-top .2rem
         line-height .8rem
         background #eee
         text-indent .2rem
@@ -71,7 +40,7 @@
     .item-img-wrapper
         height 0
         overflow hidden
-        padding-bottom 33.9%
+        padding-bottom 37.09%
 
         .item-img
             width 100%

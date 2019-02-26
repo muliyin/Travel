@@ -2,17 +2,8 @@
     <div class="wrapper">
         <swiper :options="swiperOption">
             <!-- slides -->
-            <swiper-slide>
-                <img src="../../assets/imgs/swiper-1.jpg" class="swiper-img" alt="轮播图1">
-            </swiper-slide>
-            <swiper-slide>
-                <img src="../../assets/imgs/swiper-2.jpg" class="swiper-img" alt="轮播图2">
-            </swiper-slide>
-            <swiper-slide>
-                <img src="../../assets/imgs/swiper-3.jpg" class="swiper-img" alt="轮播图3">
-            </swiper-slide>
-            <swiper-slide>
-                <img src="../../assets/imgs/swiper-4.jpg" class="swiper-img" alt="轮播图4">
+            <swiper-slide v-for="item of this.list" :key="item.id">
+                <img :src="item.imgUrl" class="swiper-img" alt="轮播图">
             </swiper-slide>
 
             <!-- Optional controls -->
@@ -25,6 +16,10 @@
 <script>
 	export default {
 		name: "HomeSwiper",
+        props:{
+			list: Array
+        },
+
 
 		data() {
 			return {
