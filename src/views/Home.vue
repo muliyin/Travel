@@ -1,10 +1,10 @@
 <template>
     <div id="home">
-        <home-header></home-header>
-        <home-swiper></home-swiper>
-        <home-icons></home-icons>
-        <home-recommend></home-recommend>
-        <home-weekend></home-weekend>
+        <home-header :city="city"></home-header>
+        <home-swiper :list="swiperList"></home-swiper>
+        <home-icons :iconList="iconList"></home-icons>
+        <home-recommend :recommendList="recommendList"></home-recommend>
+        <home-weekend :weekendList="weekendList"></home-weekend>
     </div>
 </template>
 
@@ -17,10 +17,37 @@
 	export default {
 		name: 'home',
 		components: {HomeWeekend, HomeRecommend, HomeIcons, HomeSwiper, HomeHeader},
+
+        mounted(){
+            this.getHomeInfo()
+        },
 		data() {
-			return {}
+			return {
+				city:'',
+                swiperList:[],
+                iconList:[],
+                recommendList:[],
+                weekendList: []
+            }
 		},
-		methods: {}
+		methods: {
+			getHomeInfo(){
+				this.$axios({
+                    method: 'get',
+                    url:'/index.json',
+                }).then(this.getHomeInfoSuccess)
+            },
+			getHomeInfoSuccess(res){
+				res = res.data;
+				if (res.info) {
+					this.city = res.info.city
+                    this.swiperList = res.info.swiperList
+                    this.iconList = res.info.iconList
+                    this.recommendList = res.info.recommendList
+                    this.weekendList = res.info.weekendList
+				}
+            }
+        }
 	}
 </script>
 <style scoped lang="stylus">

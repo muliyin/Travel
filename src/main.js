@@ -10,6 +10,10 @@ import fastClick from 'fastclick'   /*解决点击延迟问题*/
 import animated from 'animate.css' // npm install animate.css --save安装，在引入
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import axios from 'axios'
+import './mock/mock'
+
+Vue.prototype.$axios = axios
 
 
 Vue.config.productionTip = false;
@@ -19,10 +23,9 @@ Vue.use(animated);
 Vue.use(VueAwesomeSwiper);
 
 
-
-
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+	axios,
+	router,
+	store,
+	render: h => h(App)
 }).$mount('#app')

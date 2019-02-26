@@ -19,6 +19,9 @@
 <script>
 	export default {
 		name: "HomeIcons",
+        props:{
+		    iconList: Array
+        },
 
         computed: {
 		    pages(){
@@ -36,45 +39,6 @@
 
         data() {
 	        return {
-	        	iconList: [
-                    {
-                    	id: 1,
-                        name: '#icon-lvyou',
-                        describe: '旅游景点一'
-                    },{
-                    	id: 2,
-                        name: '#icon-tubiaozhizuomoban_bashi',
-				        describe: '巴士'
-                    },{
-                    	id: 3,
-                        name: '#icon-tubiaozhizuomoban_fanchuan',
-				        describe: '帆船'
-                    },{
-                    	id: 4,
-                        name: '#icon-tubiaozhizuomoban_huoche',
-				        describe: '火车'
-                    },{
-                    	id: 5,
-                        name: '#icon-tubiaozhizuomoban_jiudian',
-				        describe: '酒店'
-                    },{
-                    	id: 6,
-                        name: '#icon-tubiaozhizuomoban_louying',
-				        describe: '露营'
-                    },{
-                    	id: 7,
-                        name: '#icon-tubiaozhizuomoban_meishi',
-				        describe: '美食'
-                    },{
-                    	id: 8,
-                        name: '#icon-tubiaozhizuomoban_yinpin',
-				        describe: '饮品'
-                    },{
-                    	id: 9,
-                        name: '#icon-tubiaozhizuomoban_yinpin',
-				        describe: '饮品'
-                    },
-                ],
 
             };
         }
