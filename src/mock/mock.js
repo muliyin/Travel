@@ -4,7 +4,7 @@ const Random = Mock.Random;
 
 const homeInfo = function () {
 	const info = {
-		city:'北京',
+		city: '北京',
 		swiperList: [{
 			id: "0001",
 			imgUrl: require('../assets/imgs/swiper-1.jpg')
@@ -23,35 +23,35 @@ const homeInfo = function () {
 				id: 1,
 				name: '#icon-lvyou',
 				describe: '旅游景点一'
-			},{
+			}, {
 				id: 2,
 				name: '#icon-tubiaozhizuomoban_bashi',
 				describe: '巴士'
-			},{
+			}, {
 				id: 3,
 				name: '#icon-tubiaozhizuomoban_fanchuan',
 				describe: '帆船'
-			},{
+			}, {
 				id: 4,
 				name: '#icon-tubiaozhizuomoban_huoche',
 				describe: '火车'
-			},{
+			}, {
 				id: 5,
 				name: '#icon-tubiaozhizuomoban_jiudian',
 				describe: '酒店'
-			},{
+			}, {
 				id: 6,
 				name: '#icon-tubiaozhizuomoban_louying',
 				describe: '露营'
-			},{
+			}, {
 				id: 7,
 				name: '#icon-tubiaozhizuomoban_meishi',
 				describe: '美食'
-			},{
+			}, {
 				id: 8,
 				name: '#icon-tubiaozhizuomoban_yinpin',
 				describe: '饮品'
-			},{
+			}, {
 				id: 9,
 				name: '#icon-tubiaozhizuomoban_yinpin',
 				describe: '饮品'
@@ -60,34 +60,34 @@ const homeInfo = function () {
 		recommendList: [
 			{
 				id: 1,
-				url:require('../assets/imgs/icon1.png'),
-				title:'大连圣亚海洋世界',
-				describe:'浪漫大连首站，浪漫的海洋主题乐园'
-			},{
+				url: require('../assets/imgs/icon1.png'),
+				title: '大连圣亚海洋世界',
+				describe: '浪漫大连首站，浪漫的海洋主题乐园'
+			}, {
 				id: 2,
-				url:require('../assets/imgs/icon2.png'),
-				title:'大连圣亚海洋世界',
-				describe:'浪漫大连首站，浪漫的海洋主题乐园'
-			},{
+				url: require('../assets/imgs/icon2.png'),
+				title: '大连圣亚海洋世界',
+				describe: '浪漫大连首站，浪漫的海洋主题乐园'
+			}, {
 				id: 3,
-				url:require('../assets/imgs/icon3.png'),
-				title:'大连圣亚海洋世界',
-				describe:'浪漫大连首站，浪漫的海洋主题乐园'
-			},{
+				url: require('../assets/imgs/icon3.png'),
+				title: '大连圣亚海洋世界',
+				describe: '浪漫大连首站，浪漫的海洋主题乐园'
+			}, {
 				id: 4,
-				url:require('../assets/imgs/icon4.png'),
-				title:'大连圣亚海洋世界',
-				describe:'浪漫大连首站，浪漫的海洋主题乐园'
-			},{
-				id:5,
-				url:require('../assets/imgs/icon5.png'),
-				title:'大连圣亚海洋世界',
-				describe:'浪漫大连首站，浪漫的海洋主题乐园'
-			},{
+				url: require('../assets/imgs/icon4.png'),
+				title: '大连圣亚海洋世界',
+				describe: '浪漫大连首站，浪漫的海洋主题乐园'
+			}, {
+				id: 5,
+				url: require('../assets/imgs/icon5.png'),
+				title: '大连圣亚海洋世界',
+				describe: '浪漫大连首站，浪漫的海洋主题乐园'
+			}, {
 				id: 6,
-				url:require('../assets/imgs/icon1.png'),
-				title:'大连圣亚海洋世界',
-				describe:'浪漫大连首站，浪漫的海洋主题乐园'
+				url: require('../assets/imgs/icon1.png'),
+				title: '大连圣亚海洋世界',
+				describe: '浪漫大连首站，浪漫的海洋主题乐园'
 			},
 		],
 		weekendList: [
@@ -132,23 +132,28 @@ const detail = function () {
 		"sightName": "大连圣亚海洋世界(AAAA景区)",
 		"bannerImg": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
 		"gallaryImgs": ["http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg", "http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png"],
-		"categoryList": [{
-			"title": "成人票",
-			"children": [{
-				"title": "成人三馆联票",
-				"children": [{
-					"title": "成人三馆联票 - 某一连锁店销售"
-				}]
+		"categoryList": [
+			{
+				"title": "成人票",
+				"children": [
+					{
+						"title": "成人三馆联票",
+						"children": [
+							{
+								"title": "成人三馆联票 - 某一连锁店销售"
+							}
+						]
+					}, {
+						"title": "成人五馆联票"
+					}
+				]
 			}, {
-				"title": "成人五馆联票"
+				"title": "学生票"
+			}, {
+				"title": "儿童票"
+			}, {
+				"title": "特惠票"
 			}]
-		}, {
-			"title": "学生票"
-		}, {
-			"title": "儿童票"
-		}, {
-			"title": "特惠票"
-		}]
 	};
 
 	return {detail}
@@ -156,106 +161,109 @@ const detail = function () {
 
 const city = function () {
 	const city = {
-		hotCities: [{
-			"id": 1,
-			"spell": "beijing",
-			"name": "北京"
-		}, {
-			"id": 3,
-			"spell": "shanghai",
-			"name": "上海"
-		}, {
-			"id": 47,
-			"spell": "xian",
-			"name": "西安"
-		}, {
-			"id": 239,
-			"spell": "sanya",
-			"name": "三亚"
-		}, {
-			"id": 188,
-			"spell": "lijiang",
-			"name": "丽江"
-		}, {
-			"id": 125,
-			"spell": "guilin",
-			"name": "桂林"
-		}],
-		cities: {
-			"A": [{
-				"id": 56,
-				"spell": "aba",
-				"name": "阿坝"
+		hotCities: [
+			{
+				"id": 1,
+				"spell": "beijing",
+				"name": "北京"
 			}, {
-				"id": 57,
-				"spell": "akesu",
-				"name": "阿克苏"
+				"id": 3,
+				"spell": "shanghai",
+				"name": "上海"
 			}, {
-				"id": 58,
-				"spell": "alashanmeng",
-				"name": "阿拉善盟"
+				"id": 47,
+				"spell": "xian",
+				"name": "西安"
 			}, {
-				"id": 59,
-				"spell": "aletai",
-				"name": "阿勒泰"
+				"id": 239,
+				"spell": "sanya",
+				"name": "三亚"
 			}, {
-				"id": 60,
-				"spell": "ali",
-				"name": "阿里"
+				"id": 188,
+				"spell": "lijiang",
+				"name": "丽江"
 			}, {
-				"id": 61,
-				"spell": "ankang",
-				"name": "安康"
-			}, {
-				"id": 62,
-				"spell": "anqing",
-				"name": "安庆"
-			}, {
-				"id": 63,
-				"spell": "anshan",
-				"name": "鞍山"
-			}, {
-				"id": 64,
-				"spell": "anshun",
-				"name": "安顺"
-			}, {
-				"id": 65,
-				"spell": "anyang",
-				"name": "安阳"
-			}, {
-				"id": 338,
-				"spell": "acheng",
-				"name": "阿城"
-			}, {
-				"id": 339,
-				"spell": "anfu",
-				"name": "安福"
-			}, {
-				"id": 340,
-				"spell": "anji",
-				"name": "安吉"
-			}, {
-				"id": 341,
-				"spell": "anning",
-				"name": "安宁"
-			}, {
-				"id": 342,
-				"spell": "anqiu",
-				"name": "安丘"
-			}, {
-				"id": 343,
-				"spell": "anxi",
-				"name": "安溪"
-			}, {
-				"id": 344,
-				"spell": "anyi",
-				"name": "安义"
-			}, {
-				"id": 345,
-				"spell": "anyuan",
-				"name": "安远"
+				"id": 125,
+				"spell": "guilin",
+				"name": "桂林"
 			}],
-			"B": [{
+		cities: {
+			"A": [
+				{
+					"id": 56,
+					"spell": "aba",
+					"name": "阿坝"
+				}, {
+					"id": 57,
+					"spell": "akesu",
+					"name": "阿克苏"
+				}, {
+					"id": 58,
+					"spell": "alashanmeng",
+					"name": "阿拉善盟"
+				}, {
+					"id": 59,
+					"spell": "aletai",
+					"name": "阿勒泰"
+				}, {
+					"id": 60,
+					"spell": "ali",
+					"name": "阿里"
+				}, {
+					"id": 61,
+					"spell": "ankang",
+					"name": "安康"
+				}, {
+					"id": 62,
+					"spell": "anqing",
+					"name": "安庆"
+				}, {
+					"id": 63,
+					"spell": "anshan",
+					"name": "鞍山"
+				}, {
+					"id": 64,
+					"spell": "anshun",
+					"name": "安顺"
+				}, {
+					"id": 65,
+					"spell": "anyang",
+					"name": "安阳"
+				}, {
+					"id": 338,
+					"spell": "acheng",
+					"name": "阿城"
+				}, {
+					"id": 339,
+					"spell": "anfu",
+					"name": "安福"
+				}, {
+					"id": 340,
+					"spell": "anji",
+					"name": "安吉"
+				}, {
+					"id": 341,
+					"spell": "anning",
+					"name": "安宁"
+				}, {
+					"id": 342,
+					"spell": "anqiu",
+					"name": "安丘"
+				}, {
+					"id": 343,
+					"spell": "anxi",
+					"name": "安溪"
+				}, {
+					"id": 344,
+					"spell": "anyi",
+					"name": "安义"
+				}, {
+					"id": 345,
+					"spell": "anyuan",
+					"name": "安远"
+				}],
+			"B": [
+				{
 				"id": 1,
 				"spell": "beijing",
 				"name": "北京"
@@ -368,7 +376,8 @@ const city = function () {
 				"spell": "boxing",
 				"name": "博兴"
 			}],
-			"C": [{
+			"C": [
+				{
 				"id": 2,
 				"spell": "chongqing",
 				"name": "重庆"
