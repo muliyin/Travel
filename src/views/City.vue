@@ -2,8 +2,8 @@
     <div>
         <city-header></city-header>
         <city-search></city-search>
-        <city-list :cities="cities" :hot="hotCities"></city-list>
-        <alphabet :cities="cities"></alphabet>
+        <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
+        <alphabet :cities="cities" @letter="handlerLetter"></alphabet>
     </div>
 </template>
 
@@ -22,7 +22,8 @@
         data(){
 		    return {
 		    	cities:{},
-			    hotCities:[]
+			    hotCities:[],
+                letter:''
             }
         },
         methods:{
@@ -35,6 +36,9 @@
             getCityInfoSuccess(res){
 				this.cities = res.data.city.cities;
 				this.hotCities = res.data.city.hotCities;
+            },
+            handlerLetter(letter){
+				this.letter = letter
             }
         }
 	}
