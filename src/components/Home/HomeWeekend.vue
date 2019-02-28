@@ -21,11 +21,6 @@
         props: {
 		    weekendList: Array
         },
-
-		data() {
-			return {
-			}
-		},
 	}
 </script>
 
