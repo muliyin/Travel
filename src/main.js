@@ -11,7 +11,7 @@ import animated from 'animate.css' // npm install animate.css --save安装，在
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import axios from 'axios'
-import './mock/mock'
+import './mock/mock.js'
 
 Vue.prototype.$axios = axios
 

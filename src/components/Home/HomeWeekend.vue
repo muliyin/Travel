@@ -4,7 +4,7 @@
         <ul>
             <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
                 <div class="item-img-wrapper">
-                    <img class="item-img" :src="item.url" alt="">
+                    <img class="item-img" :src="item.url" alt="周末游图片">
                 </div>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>

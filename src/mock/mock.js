@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+const Mock = require('mockjs')
 
 const Random = Mock.Random;
 
@@ -123,7 +123,7 @@ const homeInfo = function () {
 			},
 		]
 	};
-	return {info}
+	return {info: info}
 };
 
 const detail = function () {
@@ -4026,9 +4026,9 @@ const city = function () {
 			}]
 		}
 	}
-	return {city}
+	return {city:city}
 }
 
-Mock.mock('/index.json', 'post' | 'get', homeInfo);
-Mock.mock('/detail.json', 'post' | 'get', detail);
-Mock.mock('/city.json', 'post' | 'get', city);
+Mock.mock('/index.json', /post|get/i, homeInfo);
+Mock.mock('/detail.json', /post|get/i, detail);
+Mock.mock('/city.json', /post|get/i, city);
