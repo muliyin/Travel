@@ -4,7 +4,6 @@ const Random = Mock.Random;
 
 const homeInfo = function () {
 	const info = {
-		city: '北京',
 		swiperList: [{
 			id: "0001",
 			imgUrl: require('../assets/imgs/swiper-1.jpg')

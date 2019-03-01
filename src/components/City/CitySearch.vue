@@ -5,7 +5,7 @@
         </div>
         <div class="search-content" ref="searchWrapper" v-show="keyword">
             <ul>
-                <li v-for="item of list" class="search-item border-bottom">{{item.name}}</li>
+                <li v-for="item of list" class="search-item border-bottom" @click="chooseCity(item.name)">{{item.name}}</li>
                 <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
             </ul>
         </div>
@@ -56,6 +56,12 @@
 				keyword: '',
 				list: [],
 				timer: null
+			}
+		},
+		methods:{
+			chooseCity(city){
+				this.$store.commit('changeCity',city);
+				this.$router.push('/')
 			}
 		}
 	}
