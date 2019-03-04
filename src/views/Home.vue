@@ -25,10 +25,15 @@
 
         mounted(){
             this.getHomeInfo()
+            this.lastCity = this.city
             console.log('mounted')
         },
 
         activated(){
+			if (this.lastCity !== this.city) {
+				this.lastCity = this.city
+				this.getHomeInfo()
+            }
 		    console.log('activated')
         },
 
@@ -38,6 +43,7 @@
                 iconList:[],
                 recommendList:[],
                 weekendList: [],
+                lastCity:''
             }
 		},
 		methods: {
