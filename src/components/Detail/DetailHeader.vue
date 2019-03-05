@@ -17,9 +17,15 @@
 	export default {
 		name: "DetailHeader",
 
+        /*使用keep-alive,每次进入页面执行activated*/
 		activated() {
 			window.addEventListener('scroll', this.handScroll)
 		},
+
+        /*页面被替换的时候执行*/
+        deactivated(){
+			window.removeEventListener('scroll',this.handScroll)
+        },
 
 		data() {
 			return {
