@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="banner" @click="clickBanner">
-            <img src="../../assets/imgs/13.jpeg" alt="banner图" class="banner-img">
+            <img src="../../assets/imgs/14.jpeg" alt="banner图" class="banner-img">
 
             <div class="banner-info">
                 <div class="banner-title">大连圣海洋世界(AAAA景区)</div>
