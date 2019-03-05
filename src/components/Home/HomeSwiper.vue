@@ -45,8 +45,11 @@
         padding-bottom 32%
         background-color #eee
 
+
         .swiper-img
             width 100%
 
+        .swiper-pagination
+            bottom 1.25rem
 
 </style>
