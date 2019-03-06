@@ -11,17 +11,20 @@
                 </div>
             </div>
         </div>
-        <gallary :images="gallaryImgs" v-show="showGallary" @closeGallary="closeGall"></gallary>
+        <fade>
+            <gallary :images="gallaryImgs" v-show="showGallary" @closeGallary="closeGall"></gallary>
+        </fade>
     </div>
 
 </template>
 
 <script>
 	import Gallary from "@/components/common/gallary/Gallary";
+	import Fade from "@/components/common/fade/Fade";
 
 	export default {
 		name: "DetailBanner",
-		components: {Gallary},
+		components: {Fade, Gallary},
 
 		props: {
 			sightName: String,
