@@ -14,13 +14,17 @@ export default new Router({
 			component: Home
 		},
 		{
-			path:'/city',
-			name:'City',
-			component:City
-		},{
-			path:'/detail/:id',
-			name:'Detail',
-			component:Detail
+			path: '/city',
+			name: 'City',
+			component: City
+		}, {
+			path: '/detail/:id',
+			name: 'Detail',
+			component: Detail
 		}
-	]
+	],
+	/*页面切换的时候始终回到最顶部*/
+	scrollBehavior(to, from, savedPosition) {
+		return {x: 0, y: 0}
+	}
 })

@@ -1,17 +1,17 @@
 <template>
     <div>
         <div class="banner" @click="clickBanner">
-            <img src="../../assets/imgs/14.jpeg" alt="banner图" class="banner-img">
+            <img :src="bannerImg" alt="banner图" class="banner-img">
 
             <div class="banner-info">
-                <div class="banner-title">大连圣海洋世界(AAAA景区)</div>
+                <div class="banner-title">{{sightName}}</div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xe67b;</span>
-                    39
+                    {{gallaryImgs.length}}
                 </div>
             </div>
         </div>
-        <gallary :images="this.images" v-show="showGallary" @closeGallary="closeGall"></gallary>
+        <gallary :images="gallaryImgs" v-show="showGallary" @closeGallary="closeGall"></gallary>
     </div>
 
 </template>
@@ -22,22 +22,25 @@
 	export default {
 		name: "DetailBanner",
 		components: {Gallary},
+
+		props: {
+			sightName: String,
+			bannerImg: String,
+			gallaryImgs: Array
+		},
 		data() {
 			return {
 				showGallary: false,
-				images: ['https://up.enterdesk.com/edpic_360_360/31/f4/1e/31f41ed6176194090c267044933531f0.jpg',
-					'https://up.enterdesk.com/edpic_360_360/d6/42/58/d642580757e6b1f8af9a4ed199ad63cc.jpg',
-					'https://up.enterdesk.com/edpic_360_360/e9/f5/47/e9f54730243b1e537dc43cc3093623d8.jpg']
 			}
 		},
-        methods:{
-	        clickBanner(){
-	        	this.showGallary = true
-            },
-	        closeGall(){
-	        	this.showGallary = false
-            }
-        }
+		methods: {
+			clickBanner() {
+				this.showGallary = true
+			},
+			closeGall() {
+				this.showGallary = false
+			}
+		}
 	}
 </script>
 

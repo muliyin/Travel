@@ -24,17 +24,15 @@
         },
 
         mounted(){
-            this.getHomeInfo()
+            this.getHomeInfo();
             this.lastCity = this.city
-            console.log('mounted')
         },
 
         activated(){
 			if (this.lastCity !== this.city) {
-				this.lastCity = this.city
+				this.lastCity = this.city;
 				this.getHomeInfo()
             }
-		    console.log('activated')
         },
 
 		data() {
@@ -59,10 +57,10 @@
 			getHomeInfoSuccess(res){
 				res = res.data;
 				if (res.info) {
-                    this.swiperList = res.info.swiperList
-                    this.iconList = res.info.iconList
-                    this.recommendList = res.info.recommendList
-                    this.weekendList = res.info.weekendList
+                    this.swiperList = res.info.swiperList;
+                    this.iconList = res.info.iconList;
+                    this.recommendList = res.info.recommendList;
+                    this.weekendList = res.info.weekendList;
 				}
             }
         }

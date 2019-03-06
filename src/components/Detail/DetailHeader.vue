@@ -39,11 +39,9 @@
 			handScroll() {
 				const top = document.documentElement.scrollTop || document.body.scrollTop
 				if (top > 60) {
-					let opacity = top / 140
-					opacity = opacity > 1 ? 1 : opacity
-					this.opacityStyle = {
-						opacity
-					}
+					let opacity = top / 140;
+					opacity = opacity > 1 ? 1 : opacity;
+					this.opacityStyle = {opacity};
 					this.showAbs = false
 				} else {
 					this.showAbs = true
@@ -76,6 +74,7 @@
         height $headerHeight
         line-height $headerHeight
         text-align center
+        z-index 2
         color #ffffff
         background $bgColor
         font-size .32rem

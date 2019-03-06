@@ -3,7 +3,7 @@
         <!--<div id="nav">
           <router-link to="/">Home</router-link>
         </div>-->
-        <keep-alive>
+        <keep-alive exclude="Detail">
             <router-view/>
         </keep-alive>
     </div>
